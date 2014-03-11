@@ -32,8 +32,7 @@ class Type < PokeApi
 	end
 
 	def create_type type
-		if self.class.type_chart[type['name']]; self.class.type_chart[type['name']] end
-		Type.new type['resource_uri'] 
+		self.class.type_chart[type['name'].capitalize] ||= Type.new type['resource_uri'] 
 	end
 
 end

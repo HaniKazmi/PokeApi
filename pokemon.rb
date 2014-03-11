@@ -1,5 +1,8 @@
 require_relative 'pokeapi'
 require_relative 'type'
+require_relative 'move'
+require_relative 'ability'
+require_relative 'description'
 
 class Pokemon < PokeApi
 
@@ -20,23 +23,23 @@ class Pokemon < PokeApi
 	end
 
 	def abilities
-		@pokemon['abilities']
+		@abilities ||= @pokemon['abilities'].collect { |ability| Ability.new ability['resource_uri'] }
 	end
 
 	def egg_groups
-		@pokemon['egg_groups']
+		@egg_groups ||= @pokemon['egg_groups'].collect { |egg_group| EggGroup.new egg_group['resource_uri'] }
 	end
 
 	def evolutions
-		@pokemon['evolutions']
+		@evolutions ||= @pokemon['evolutions'].collect { |evolution| Pokemon.new evolution['resource_uri'] }
 	end
 
 	def descriptions
-		@pokemon['descriptions']
+		@descriptions ||= @pokemon['descriptions'].collect { |description| Description.new description['resource_uri'] }
 	end
 
 	def moves
-		@pokemon['moves']
+		@moves ||= @pokemon['moves'].collect { |move| Move.new move['resource_uri'] }
 	end
 
 	def catch_rate

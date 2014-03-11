@@ -1,7 +1,7 @@
 require "test/unit"
-require_relative '../pokemon'
+require_relative '../move'
 
-class TestPokemon < Test::Unit::TestCase
+class TestType < Test::Unit::TestCase
 
 	def test_constructor
 		assert Type.new '/api/v1/type/1/'
