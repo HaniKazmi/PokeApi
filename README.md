@@ -1,4 +1,11 @@
-==PokeApi
+# PokeApi
 A ruby wrapper for http://pokeapi.co
 
-Documentation (maybe) coming soon
+## Installation
+
+  gem install pokeruby
+
+## Usage
+
+  bulbasaur = Pokemon.new "bulbasaur"
+  bulbasaurMoves = bulbasaur.moves

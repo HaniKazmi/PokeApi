@@ -1,5 +1,5 @@
 require "test/unit"
-require 'pokeruby'
+require 'pokeruby/pokemon'
 
 class TestPokemon < Test::Unit::TestCase
 	def test_constuctor

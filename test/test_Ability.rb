@@ -1,5 +1,5 @@
 require "test/unit"
-require 'pokeruby'
+require 'pokeruby/ability'
 
 class TestAbility < Test::Unit::TestCase
 
