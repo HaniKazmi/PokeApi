@@ -1,5 +1,5 @@
 require "test/unit"
-require_relative '../egg_group'
+require 'pokeruby'
 
 class TestEggGroup < Test::Unit::TestCase
 
