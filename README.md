@@ -3,9 +3,9 @@ A ruby wrapper for http://pokeapi.co
 
 ## Installation
 
-  gem install pokeruby
+gem install pokeruby
 
 ## Usage
 
-  bulbasaur = Pokemon.new "bulbasaur"
-  bulbasaurMoves = bulbasaur.moves
+bulbasaur = Pokemon.new "bulbasaur"  
+bulbasaurMoves = bulbasaur.moves
